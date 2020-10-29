@@ -18,10 +18,10 @@ namespace GradeBook.GradeBooks
             {
                 throw new InvalidOperationException("You must have atleast 5 students to rank by grades.");
             }
-            var dropLetterGrade = Students.Count * (20/100);
-            if (averageGrade >= Students.Count - dropLetterGrade)
+
+            if (averageGrade >= 90)
                 return 'A';
-            else if (averageGrade >= Students.Count - (dropLetterGrade *2))
+            else if (averageGrade >= 80)
                 return 'B';
             else if (averageGrade >= 70)
                 return 'C';
