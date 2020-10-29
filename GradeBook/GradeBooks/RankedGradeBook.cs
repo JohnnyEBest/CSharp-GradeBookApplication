@@ -1,6 +1,7 @@
 ﻿using GradeBook.Enums;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace GradeBook.GradeBooks
@@ -15,9 +16,9 @@ namespace GradeBook.GradeBooks
         {
             if (Students.Count < 5)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("You must have atleast 5 students to rank by grades.");
             }
-            int dropLetterGrade = Students.Count * (20/100);
+            var dropLetterGrade = Students.Count * (20/100);
             if (averageGrade >= Students.Count - dropLetterGrade)
                 return 'A';
             else if (averageGrade >= Students.Count - (dropLetterGrade *2))
