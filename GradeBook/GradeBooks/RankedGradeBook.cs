@@ -20,7 +20,7 @@ namespace GradeBook.GradeBooks
             int dropLetterGrade = Students.Count * (20/100);
             if (averageGrade >= Students.Count - dropLetterGrade)
                 return 'A';
-            else if (averageGrade >= 80)
+            else if (averageGrade >= Students.Count - (dropLetterGrade *2))
                 return 'B';
             else if (averageGrade >= 70)
                 return 'C';
