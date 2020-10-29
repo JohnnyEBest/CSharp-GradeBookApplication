@@ -18,6 +18,7 @@ namespace GradeBook.GradeBooks
             {
                 throw new InvalidOperationException("You must have atleast 5 students to rank by grades.");
             }
+                return 'F';
         }
     }
 
